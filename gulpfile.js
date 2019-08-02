@@ -27,7 +27,7 @@ gulp.task('js', function(){
         .pipe(concat('app.js'))
         .pipe(babel())
         .pipe(uglify())
-        .pipe(gulp.dest('website'));
+        .pipe(gulp.dest('site'));
 });
 
 // Watch task: watch SCSS and JS files for changes
