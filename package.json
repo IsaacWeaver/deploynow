@@ -27,7 +27,13 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2"
   },
-  "babel":{
-    "presets":["es2015"]
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5"
   }
 }
