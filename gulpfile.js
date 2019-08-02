@@ -18,7 +18,7 @@ gulp.task('sass', function(){
     return gulp.src('./src/sass/*.scss')
         .pipe(sass()) // compile SCSS to CSS
         .pipe(cssnano()) // minify CSS
-        .pipe(gulp.dest('website')); // put final CSS in dist folder
+        .pipe(gulp.dest('site')); // put final CSS in dist folder
 });
 
 // JS task: concatenates and uglifies JS files to script.js
