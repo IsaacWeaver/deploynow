@@ -1,0 +1,107 @@
+@import "variables";
+
+.AnimationFlashWrapper{
+    color: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 20px rgba(0,0,0,0);
+}
+
+.AnimateFlashWrapper{
+    animation: FlashWrapper .3s forwards;
+    animation-delay: 1s;
+}   
+
+.AnimationFlashContent{
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.AnimateFlashContent{
+    animation: FlashContent .3s forwards;
+    animation-delay: 1s;
+}
+
+.AnimationFlashBackground{
+    position: absolute;
+    background-color: gray;
+    width: 5%;
+    top: 0;
+    left: 0;
+    bottom: 100%;
+}
+
+.AnimateFlashBackground{
+    animation: FlashBackground 1s ease-in;
+}
+
+.AnimationFlashBackgroundFinal{
+    position: absolute;
+    background-color: white;
+    width: 0%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.AnimateFlashBackgroundFinal{
+    animation: FlashBackgroundFinale .5s ease-in forwards;
+    animation-delay: .5s;
+}
+
+@keyframes FlashContent{
+    0%{
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes FlashBackground{
+    0%{
+        left: 0;
+        bottom: 100%;
+        width: 5%;
+    }
+    25%{
+        left: 0;
+        bottom: 0;
+        width: 5%;
+
+    }
+    60%{
+        left: 0%;
+        bottom: 0;
+        width: 100%;
+    }
+    100%{
+        left: 100%;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+@keyframes FlashBackgroundFinale{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes FlashWrapper{
+    0%{
+        box-shadow: 0px 0px 20px 20px rgba(0,0,0,0);
+    }
+    100%{
+        box-shadow: $boxShadow;
+    }
+}

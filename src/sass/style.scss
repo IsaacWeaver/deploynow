@@ -1,0 +1,24 @@
+@import '_reset';
+@import '_fonts';
+@import '_styleSheet';
+@import '_deployNow';
+@import 'variables';
+@import '_animations';
+
+//Custom Styling to Blocks
+.CustomGrid{
+    justify-content: stretch;
+}
+
+.CustomItem{
+    background-color: blue;
+    color: white;
+    text-align: left;
+}
+
+.CustomItem2{
+    height: 200px;
+    width: 200px;
+    // border: none;
+    // background-color: rgba(0,0,0,0);
+}

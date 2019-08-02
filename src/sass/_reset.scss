@@ -1,0 +1,27 @@
+// Removes mobile styling for inputs
+%remove-mobile-input-styling{
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+html,
+body,
+ul,
+ol{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+input[type=button]{
+    @extend %remove-mobile-input-styling;
+}
+input[type=text]{
+    @extend %remove-mobile-input-styling;
+}
+input[type=password]{
+    @extend %remove-mobile-input-styling;
+}
+input[type=submit]{
+    @extend %remove-mobile-input-styling;
+}
