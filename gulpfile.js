@@ -25,7 +25,9 @@ gulp.task('sass', function(){
 gulp.task('js', function(){
     return gulp.src(['./src/js/*.js'])
         .pipe(concat('app.js'))
-        .pipe(babel())
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         .pipe(uglify())
         .pipe(gulp.dest('site'));
 });
