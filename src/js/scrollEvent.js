@@ -45,7 +45,8 @@ function effectFlashAnimation(elements, yOffset, debug){
                 Flash Animation\n
                 Scroll Position: ${scrolled}\n
                 ElementOffset: ${elementOffset}\n
-                Distance: ${distance}\n`);
+                Distance: ${distance}\n
+                `);
         }
         if (distance <= 0){
             let flashBackground = elements[i].querySelector('.AnimationFlashBackground');

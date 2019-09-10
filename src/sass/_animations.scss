@@ -1,5 +1,9 @@
 @import "variables";
 
+/*
+    - Animation Styling
+    - Animation Name: Flash
+*/
 .AnimationFlashWrapper{
     color: inherit;
     position: absolute;
@@ -8,7 +12,7 @@
     right: 0;
     bottom: 0;
     overflow: hidden;
-    box-shadow: 0px 0px 20px 20px rgba(0,0,0,0);
+    box-shadow: $boxShadowClear
 }
 
 .AnimateFlashWrapper{
@@ -29,10 +33,11 @@
 .AnimationFlashBackground{
     position: absolute;
     background-color: gray;
-    width: 5%;
+    width: 100%;
     top: 0;
-    left: 0;
-    bottom: 100%;
+    left: 0%;
+    bottom: 0%;
+    transform: translate(-95%, -100%);
 }
 
 .AnimateFlashBackground{
@@ -42,10 +47,11 @@
 .AnimationFlashBackgroundFinal{
     position: absolute;
     background-color: white;
-    width: 0%;
+    width: 100%;
     top: 0;
     left: 0;
     bottom: 0;
+    transform: translate(-100%, 0%);
 }
 
 .AnimateFlashBackgroundFinal{
@@ -66,40 +72,31 @@
 
 @keyframes FlashBackground{
     0%{
-        left: 0;
-        bottom: 100%;
-        width: 5%;
+        transform: translate(-95%, -100%);
     }
     25%{
-        left: 0;
-        bottom: 0;
-        width: 5%;
-
+        transform: translate(-95%, 0%);
     }
     60%{
-        left: 0%;
-        bottom: 0;
-        width: 100%;
+        transform: translate(0%, 0%);
     }
     100%{
-        left: 100%;
-        bottom: 0;
-        width: 100%;
+        transform: translate(100%, 0%);
     }
 }
 
 @keyframes FlashBackgroundFinale{
     0%{
-        width: 0%;
+        transform: translate(-100%, 0%);
     }
     100%{
-        width: 100%;
+        transform: translate(0%, 0%);
     }
 }
 
 @keyframes FlashWrapper{
     0%{
-        box-shadow: 0px 0px 20px 20px rgba(0,0,0,0);
+        box-shadow: $boxShadowClear;
     }
     100%{
         box-shadow: $boxShadow;

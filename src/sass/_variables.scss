@@ -1,6 +1,11 @@
-//Width for devices. Use the min width for each device as your break point. 
-//Phones aren't specified because their min width is 0 and max is tablets min width.
+/*
+    -Media break points for desktop and tablet modes
+*/
 $desktop-width: 1024px;
 $tablet-width: 768px;
 
+/*
+    Global variables
+*/
 $boxShadow: 0px 0px 20px 20px rgba(0,0,0,0.32);
+$boxShadowClear: 0px 0px 20px 20px rgba(0,0,0,0);
