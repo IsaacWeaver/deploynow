@@ -9,85 +9,193 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="Wrapper">
-            <h1>Header 1</h1>
-            <h2>Header 2</h2>
-            <h3>Header 3</h3>
-            <h4>Header 4</h4>
-            <p>Paragraph</p>
-            <a href="./index.html">Link</a>
-            <div class="Grid Cols-4 Rows-3 CustomGrid">
-                <div id="parallax" class="Col-1-1 Row-1-3 JStretch Template CustomItem">
-                    <p>(1,1)</p>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <div class="Wrapper CustomWrapper">
+            <div>
+                <h1>Style Sheet</h1>
+                <h1>Header 1</h1>
+                <h2>Header 2</h2>
+                <h3>Header 3</h3>
+                <h4>Header 4</h4>
+                <p>Paragraph</p>
+                <a href="./index.html">Link</a>
+                <br><br>
+            </div>
+        
+            <h1>Base Grid</h1>
+            <p>Deploy Now works on CSS Grids. Your standard grid in this framework is a 4 by 4 grid represented below.</p>
+            <p>If your design requires more than what can be accomplished in a 4x4 Grid simply break and start a new 4x4 grid.</p>
+            <p>The grid elements can be redesigned each by adding a custom class in the style.scss file.</p>
+            <p>For wire framing purposes the 'Template' class will add dashes around your cells.</p>
+            <div class="Grid Cols-4 Rows-4">
+                <div class="Col-1-1 Row-1-1 Template">
+                    <p>[1, 1]</p>
                 </div>
-                <div class="Col-2-1 Row-1-1 Template CustomItem2">
-                    <div class="AnimationFlashWrapper">
-                        <div class="AnimationFlashBackground"></div>
-                        <div class="AnimationFlashBackgroundFinal"></div>
-                        <div class="AnimationFlashContent">
-                            <p style="margin-left: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            </p>
-                        </div>
-                    </div>
+                <div class="Col-2-1 Row-1-1 Template">
+                    <p>[2, 1]</p>
                 </div>
                 <div class="Col-3-1 Row-1-1 Template">
-                    <p>(3,1)</p>
+                    <p>[3, 1]</p>
                 </div>
                 <div class="Col-4-1 Row-1-1 Template">
-                    <p>(4,1)</p>
+                    <p>[4, 1]</p>
+                </div>
+
+                <div class="Col-1-1 Row-2-1 Template">
+                    <p>[1, 2]</p>
                 </div>
                 <div class="Col-2-1 Row-2-1 Template">
-                    <p>(2,2)</p>
+                    <p>[2, 2]</p>
                 </div>
                 <div class="Col-3-1 Row-2-1 Template">
-                    <p>(3,2)</p>
+                    <p>[3, 2]</p>
                 </div>
-                <div id="parallax2" class="Col-2-3 Row-3-1 Template CustomItem2">
+                <div class="Col-4-1 Row-2-1 Template">
+                    <p>[4, 2]</p>
+                </div>
+
+                <div class="Col-1-1 Row-3-1 Template">
+                    <p>[1, 3]</p>
+                </div>
+                <div class="Col-2-1 Row-3-1 Template">
+                    <p>[2, 3]</p>
+                </div>
+                <div class="Col-3-1 Row-3-1 Template">
+                    <p>[3, 3]</p>
+                </div>
+                <div class="Col-4-1 Row-3-1 Template">
+                    <p>[4, 3]</p>
+                </div>
+
+                <div class="Col-1-1 Row-4-1 Template">
+                    <p>[1, 4]</p>
+                </div>
+                <div class="Col-2-1 Row-4-1 Template">
+                    <p>[2, 4]</p>
+                </div>
+                <div class="Col-3-1 Row-4-1 Template">
+                    <p>[3, 4]</p>
+                </div>
+                <div class="Col-4-1 Row-4-1 Template">
+                    <p>[4, 4]</p>
+                </div>
+            </div>
+
+            <h1>Effects</h1>
+            <p>Deploy Now also hosts effects that can be applied to each cell.</p>
+            <p>This include animations and parrlax effects as demonstrated bellow.</p>
+            <div class="Grid Cols-4 Rows-4">
+                <div class="Col-1-1 Row-1-1 Template">
+                    <p>[1, 1]</p>
+                </div>
+                <div class="Col-2-1 Row-1-1 Template">
+                    <p>[2, 1]</p>
+                </div>
+                <div class="Col-3-1 Row-1-1 Template">
+                    <p>[3, 1]</p>
+                </div>
+                <div class="Col-4-1 Row-1-1 Template">
+                    <p>[4, 1]</p>
+                </div>
+
+                <div class="Col-1-1 Row-2-1 Template">
+                    <p>[1, 2]</p>
+                </div>
+                <div class="Col-2-1 Row-2-1 Template">
+                    <p>[2, 2]</p>
+                </div>
+                <div class="Col-3-1 Row-2-1 Template">
+                    <p>[3, 2]</p>
+                </div>
+                <div class="Col-4-1 Row-2-1 Template">
+                    <p>[4, 2]</p>
+                </div>
+
+                <div class="Col-1-1 Row-3-1 Template">
+                    <p>[1, 3]</p>
+                </div>
+                <div class="Col-2-1 Row-3-1 Template">
+                    <p>[2, 3]</p>
+                </div>
+                <div class="Col-3-1 Row-3-1 Template">
+                    <p>[3, 3]</p>
+                </div>
+                <div class="Col-4-1 Row-3-1 Template">
+                    <p>[4, 3]</p>
+                </div>
+
+                <div class="Col-1-1 Row-4-1 Template">
+                    <p>[1, 4]</p>
+                </div>
+                <div class="Col-2-1 Row-4-1 Template">
+                    <p>[2, 4]</p>
+                </div>
+                <div id="parallax" class="Col-3-1 Row-4-1 Template CustomCell">
+                    <p>[3, 4]</p>
+                </div>
+                <div class="Col-4-1 Row-4-1 Template">
                     <div class="AnimationFlashWrapper">
                         <div class="AnimationFlashBackground"></div>
                         <div class="AnimationFlashBackgroundFinal"></div>
                         <div class="AnimationFlashContent">
-                            <p style="margin-left: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            </p>
+                            <p style="margin-left: 10px;">[4, 4]</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="Grid Cols-1 Rows-4">
+
+            <h1>Customization</h1>
+            <p>Deploy Now allows for customization of each cell.</p>
+            <div class="Grid Cols-4 Rows-4">
                 <div class="Col-1-1 Row-1-1 Template">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    <p>[1, 1]</p>
                 </div>
+                <div class="Col-2-1 Row-1-1 Template">
+                    <p>[2, 1]</p>
+                </div>
+                <div class="Col-3-1 Row-1-1 Template">
+                    <p>[3, 1]</p>
+                </div>
+                <div class="Col-4-1 Row-1-1 Template">
+                    <p>[4, 1]</p>
+                </div>
+
                 <div class="Col-1-1 Row-2-1 Template">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    <p>[1, 2]</p>
                 </div>
+                <div class="Col-2-1 Row-2-1 Template">
+                    <p>[2, 2]</p>
+                </div>
+                <div class="Col-3-1 Row-2-1 Template">
+                    <p>[3, 2]</p>
+                </div>
+                <div class="Col-4-1 Row-2-1 Template">
+                    <p>[4, 2]</p>
+                </div>
+
                 <div class="Col-1-1 Row-3-1 Template">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    <p>[1, 3]</p>
                 </div>
+                <div class="Col-2-1 Row-3-1 Template">
+                    <p>[2, 3]</p>
+                </div>
+                <div class="Col-3-1 Row-3-1 Template">
+                    <p>[3, 3]</p>
+                </div>
+                <div class="Col-4-1 Row-3-1 Template">
+                    <p>[4, 3]</p>
+                </div>
+
                 <div class="Col-1-1 Row-4-1 Template">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    <p>[1, 4]</p>
+                </div>
+                <div class="Col-2-1 Row-4-1 Template">
+                    <p>[2, 4]</p>
+                </div>
+                <div class="Col-3-1 Row-4-1 Template">
+                    <p>[3, 4]</p>
+                </div>
+                <div class="Col-4-1 Row-4-1 Template">
+                    <p style="margin-left: 10px;">[4, 4]</p>
                 </div>
             </div>
         </div>

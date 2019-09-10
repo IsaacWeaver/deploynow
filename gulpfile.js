@@ -5,13 +5,13 @@
     npm install gulp-concat
     npm install gulp-uglify
 */
-var gulp = require('gulp');
-var cssnano = require('gulp-cssnano');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var babel = require('gulp-babel');
-
+const gulp = require('gulp');
+const cssnano = require('gulp-cssnano');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
+const webpack = require('webpack-stream');
 
 // Sass task: compiles the style.scss file into style.css
 gulp.task('sass', function(){
@@ -24,6 +24,7 @@ gulp.task('sass', function(){
 // JS task: concatenates and uglifies JS files to script.js
 gulp.task('js', function(){
     return gulp.src(['./src/js/*.js'])
+        .pipe(webpack(require('./webpack.custom.config.js')))
         .pipe(concat('app.js'))
         .pipe(babel({
             presets: ['@babel/env']

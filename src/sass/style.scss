@@ -6,19 +6,13 @@
 @import '_animations';
 
 //Custom Styling to Blocks
-.CustomGrid{
-    justify-content: stretch;
+.CustomWrapper{
+    width: 85%;
+    max-width: 900px;
+    margin: auto;
 }
 
-.CustomItem{
-    background-color: blue;
-    color: white;
-    text-align: left;
-}
-
-.CustomItem2{
-    height: 200px;
-    width: 200px;
-    // border: none;
-    // background-color: rgba(0,0,0,0);
+.CustomCell{
+    background-color: white;
+    box-shadow: $boxShadow;
 }
