@@ -29,6 +29,24 @@ export default class Effects {
     flashAnimation(elements, distanceFromTop, debug){
         let scrolled = window.pageYOffset;
         for(let i = 0; i < elements.length; i++){
+            
+            //TODO: Fix mobile mode for animation
+            //Resize cell height to ensure mobile mode doesn't turn height to 0
+            // let cell = elements[i].parentElement;
+            // let animationFlashContent = elements[i].querySelector('.AnimationFlashContent');
+            // let content = animationFlashContent.firstElementChild;
+            // let contentHeight = content.offsetHeight;
+            // let contentMarginBottom = content.style.marginTop;
+            // contentMarginBottom = contentMarginBottom.substring(0, contentMarginBottom.length - 2);
+            // contentMarginBottom = parseInt(contentMarginBottom);
+            // let contentMarginTop = content.style.marginTop;
+            // contentMarginTop = contentMarginTop.substring(0, contentMarginTop.length - 2);
+            // contentMarginTop = parseInt(contentMarginTop);
+            // let marginHeight = contentMarginTop + contentMarginBottom;
+            // contentHeight = (marginHeight + contentHeight);
+            // contentHeight = contentHeight + "px";
+            // cell.style.minHeight = contentHeight;
+        
             let elementOffset = utility.getPosition(elements[i]).y;
             let distance = (elementOffset - distanceFromTop);
             if (debug == true){

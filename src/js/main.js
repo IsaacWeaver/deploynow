@@ -12,3 +12,5 @@ window.addEventListener('scroll', function() {
     effects.parallax('', '', 0, 30, 0.1, parallax, false);
     effects.flashAnimation(animationFlashElements, 1000, false);
 });
+
+
