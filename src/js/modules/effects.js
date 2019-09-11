@@ -11,13 +11,24 @@ export default class Effects {
         @element: the element you wish to apply this effect to 
         @debug: prints the position of the scroll for the site and the amount the element has been transformed by
     */
-    parallax(rotation, scale, xOffset, yOffset, speed, element, debug){
+    parallaxById(rotation, scale, xOffset, yOffset, speed, element, debug){
         let scrolled = window.pageYOffset;
         let transformTop = - ((scrolled * speed) - yOffset) + "px";
         if (debug==true){
             console.log(`Element ID: ${element.id}\nEffect: parallax:\nScrolled:${scrolled}\nTransformTop:${transformTop}`);
         }
         element.style.transform = " translate(" + xOffset + ", " + transformTop + ")" + rotation + " " + scale;
+    }
+
+    parallaxByClass(rotation, scale, xOffset, yOffset, speed, elements, debug){
+        let scrolled = window.pageYOffset;
+        let transformTop = - ((scrolled * speed) - yOffset) + "px";
+        for (let i = 0; i < elements.length; i++){
+            if (debug==true){
+                console.log(`Element ID: ${elements[i].id}\nEffect: parallax:\nScrolled:${scrolled}\nTransformTop:${transformTop}`);
+            }
+            elements[i].style.transform = " translate(" + xOffset + ", " + transformTop + ")" + rotation + " " + scale;
+        }
     }
 
     /*
@@ -29,24 +40,6 @@ export default class Effects {
     flashAnimation(elements, distanceFromTop, debug){
         let scrolled = window.pageYOffset;
         for(let i = 0; i < elements.length; i++){
-            
-            //TODO: Fix mobile mode for animation
-            //Resize cell height to ensure mobile mode doesn't turn height to 0
-            // let cell = elements[i].parentElement;
-            // let animationFlashContent = elements[i].querySelector('.AnimationFlashContent');
-            // let content = animationFlashContent.firstElementChild;
-            // let contentHeight = content.offsetHeight;
-            // let contentMarginBottom = content.style.marginTop;
-            // contentMarginBottom = contentMarginBottom.substring(0, contentMarginBottom.length - 2);
-            // contentMarginBottom = parseInt(contentMarginBottom);
-            // let contentMarginTop = content.style.marginTop;
-            // contentMarginTop = contentMarginTop.substring(0, contentMarginTop.length - 2);
-            // contentMarginTop = parseInt(contentMarginTop);
-            // let marginHeight = contentMarginTop + contentMarginBottom;
-            // contentHeight = (marginHeight + contentHeight);
-            // contentHeight = contentHeight + "px";
-            // cell.style.minHeight = contentHeight;
-        
             let elementOffset = utility.getPosition(elements[i]).y;
             let distance = (elementOffset - distanceFromTop);
             if (debug == true){
@@ -61,7 +54,8 @@ export default class Effects {
             if (distance <= 0){
                 let flashBackground = elements[i].querySelector('.AnimationFlashBackground');
                 let flashBackgroundFinal = elements[i].querySelector('.AnimationFlashBackgroundFinal');
-                let flashBackgroundContent = elements[i].querySelector('.AnimationFlashContent');
+                let cell = elements[i].parentNode;
+                let flashBackgroundContent = cell.querySelector('.AnimationFlashContent');
                 if (flashBackground.classList.contains('AnimateFlashBackground')){
                 }else{
                     elements[i].classList.add('AnimateFlashWrapper');
