@@ -1,0 +1,48 @@
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/jp2 "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+  
+    # Video
+    ExpiresByType video/mp4 "access plus 1 year"
+    ExpiresByType video/mpeg "access plus 1 year"
+
+    # CSS, JavaScript
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+
+    # Others
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType application/x-shockwave-flash "access plus 1 month"
+</IfModule>
+
+# BEGIN Caching
+<ifModule mod_headers.c>
+<filesMatch "\\.(ico|pdf|flv|jpg|jpeg|png|gif|swf|ttf|otf|woff|woff2|eot|svg)$">
+Header set Cache-Control "max-age=31557600, public"
+</filesMatch>
+<filesMatch "\\.(css)$">
+Header set Cache-Control "max-age=31557600, public"
+</filesMatch>
+<filesMatch "\\.(js)$">
+Header set Cache-Control "max-age=31557600, private"
+</filesMatch>
+<filesMatch "\\.(xml|txt)$">
+Header set Cache-Control "max-age=31557600, public, must-revalidate"
+</filesMatch>
+<filesMatch "\\.(html|htm|php)$">
+Header set Cache-Control "max-age=1, private, must-revalidate"
+</filesMatch>
+<filesMatch "\\.(webp)$">
+Header set Cache-Control "max-age=31557600, public"
+</filesMatch>
+</ifModule>
+# END Caching
